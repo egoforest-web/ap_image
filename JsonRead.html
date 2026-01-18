@@ -1,43 +1,40 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <title>応用情報技術者試験 用語集</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body { font-family: sans-serif; margin: 20px; }
-#terms {
-  display: flex;          /* 横並びにする */
-  flex-wrap: wrap;        /* 幅が足りない場合は折り返し */
-  gap: 10px;              /* 用語間の余白 */
-  padding: 0;
-  margin: 10px 0;
-}
-.category {
-  margin-bottom: 20px;
-}
-.category-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.category-terms {
-  display: flex;          /* 横並び */
-  flex-wrap: wrap;        /* 幅が足りない場合は折り返し */
-  gap: 10px;              /* 用語間の余白 */
-}
-.term {
-  cursor: pointer;
-  color: #007bff;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #f9f9f9;
-  white-space: nowrap;
-}
+  #terms {
+    display: flex;          /* 横並びにする */
+    flex-wrap: wrap;        /* 幅が足りない場合は折り返し */
+    gap: 10px;              /* 用語間の余白 */
+    padding: 0;
+    margin: 10px 0;
+  }
+    .category {
+    margin-bottom: 20px;
+  }
+  .category-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .category-terms {
+    display: flex;          /* 横並び */
+    flex-wrap: wrap;        /* 幅が足りない場合は折り返し */
+    gap: 10px;              /* 用語間の余白 */
+  }
+  .term {
+    cursor: pointer;
+    color: #007bff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+    white-space: nowrap;
+  }
   .term:hover { text-decoration: underline; }
   #description {
     position: fixed;       /* 画面に固定 */
@@ -57,6 +54,29 @@
     display: block;
     margin-top: 10px;
   }
+  
+@media (max-width: 768px) {
+    .category-terms {
+      flex-direction: column; /* スマホでは縦並び */
+      gap: 5px;
+    }
+    .term {
+      width: 100%; /* 横幅いっぱい */
+      text-align: center;
+      font-size: 16px;
+      padding: 10px;
+    }
+    #description {
+      height: 50%; /* 説明エリアを広く */
+      font-size: 14px;
+    }
+    .term-image {
+      max-width: 100%; /* スマホでは画面幅に合わせる */
+      height: auto;
+    }
+  }
+
+  
 </style>
 </head>
 <body>
@@ -112,4 +132,3 @@ fetch('terms.json')
 </script>
 </body>
 </html>
-
