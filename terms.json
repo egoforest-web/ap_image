@@ -5,7 +5,7 @@
       {
         "term": "正規化",
         "description": "データベース設計において、冗長性を減らし、データの一貫性を保つためにテーブルを分割するプロセス。第一正規形 (1NF)、第二正規形 (2NF)、第三正規形 (3NF) などの段階があります。",
-        "image": "https://github.com/egoforest-web/ap_image/blob/main/2026_01_18%2013_39%20Office%20Lens.jpg?raw=true"
+        "image": "-"
       },
       {
         "term": "ER図（エンティティ・リレーションシップ図）",
@@ -179,8 +179,8 @@
       },
       {
         "term": "ポジショニング戦略",
-        "description": "市場における自社製品やサービスの位置づけを明確にし、競争優位を築く戦略です。差別化戦略や集中戦略の一環として行われます。",
-        "image": "-"
+        "description": "市場における自社製品やサービスの位置づけを明確にし、競争優位を築く戦略です。差別化戦略や集中戦略の一環として行われます。カレーチェーンは「Coco壱番屋」と真っ先に浮かぶ。",
+        "image": "https://www.shopowner-support.net/wp-content/uploads/2023/08/positioningmap2.png"
       },
       {
         "term": "ブルーオーシャン戦略",
