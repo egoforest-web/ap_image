@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>応用情報技術者試験 用語集</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body { font-family: sans-serif; margin: 20px; }
+  #terms {
+    display: flex;          /* 横並びにする */
+    flex-wrap: wrap;        /* 幅が足りない場合は折り返し */
+    gap: 10px;              /* 用語間の余白 */
+    padding: 0;
+    margin: 10px 0;
+  }
+    .category {
+    margin-bottom: 20px;
+  }
+  .category-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .category-terms {
+    display: flex;          /* 横並び */
+    flex-wrap: wrap;        /* 幅が足りない場合は折り返し */
+    gap: 10px;              /* 用語間の余白 */
+  }
+  .term {
+    cursor: pointer;
+    color: #007bff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+    white-space: nowrap;
+  }
+  .term:hover { text-decoration: underline; }
+  #description {
+    position: fixed;       /* 画面に固定 */
+    bottom: 0;             /* 下に配置 */
+    left: 0;
+    width: 100%;           /* 横幅いっぱい */
+    height: 40%;           /* 高さを画面の20%に */
+    overflow-y: auto;      /* 内容が多い場合スクロール */
+    background: #fff;      /* 背景色（見やすく） */
+    border-top: 2px solid #ccc; /* 上に境界線 */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .term-image {
+    max-width: 300px; /* 横幅を制限 */
+    height: auto;     /* 縦横比を維持 */
+    display: block;
+    margin-top: 10px;
+  }
+  
+@media (max-width: 768px) {
+    .category-terms {
+      flex-direction: column; /* スマホでは縦並び */
+      gap: 5px;
+    }
+    .term {
+      width: 100%; /* 横幅いっぱい */
+      text-align: center;
+      font-size: 16px;
+      padding: 10px;
+    }
+    #description {
+      height: 50%; /* 説明エリアを広く */
+      font-size: 14px;
+    }
+    .term-image {
+      max-width: 100%; /* スマホでは画面幅に合わせる */
+      height: auto;
+    }
+  }
+
+  
+</style>
+</head>
+<body>
+<h1>応用情報技術者試験 用語集</h1>
+<div id="terms"></div>
+<div id="description">ここに説明が表示されます。</div>
+
+<script>
+fetch('terms.json')
+  .then(response => response.json())
+  .then(data => {
+    const list = document.getElementById('terms');
+    const descBox = document.getElementById('description');
+
+    data.forEach(category => {
+      // カテゴリコンテナ
+      const categoryDiv = document.createElement('div');
+      categoryDiv.className = 'category';
+
+      // タイトル
+      const title = document.createElement('div');
+      title.className = 'category-title';
+      title.textContent = category.title;
+      categoryDiv.appendChild(title);
+
+      // 用語コンテナ（横並び）
+      const termsContainer = document.createElement('div');
+      termsContainer.className = 'category-terms';
+
+      category.terms.forEach(item => {
+        const termDiv = document.createElement('div');
+        termDiv.textContent = item.term;
+        termDiv.className = 'term';
+        termDiv.addEventListener('click', () => {
+          let imgTag = '';
+          if (item.image && item.image !== '-') {  // 画像がある場合のみタグ生成
+            imgTag = `<img src="${item.image}" alt="${item.term}" class="term-image">`;
+          }
+          descBox.innerHTML = `
+            <h2>${item.term}</h2>
+            <p>${item.description}</p>
+            ${imgTag}
+          `;
+        });
+        termsContainer.appendChild(termDiv);
+      });
+
+      categoryDiv.appendChild(termsContainer);
+      list.appendChild(categoryDiv);
+    });
+  });
+
+</script>
+</body>
+</html>
