@@ -1,7 +1,70 @@
 [
   {
+    "title": "応用数学",
+    "terms": [
+      {
+        "term": "主成分分析",
+        "description": "主成分分析とは、多くの変数を持つデータを集約して主成分を作成する統計的分析手法です。",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90.jpg?raw=true",
+        "priority": "1"
+      }
+    ]
+  },
+  {
+    "title": "コンピュータ構成要素",
+    "terms": [
+      {
+        "term": "パイプライン処理",
+        "description": "複数の命令を並行して実行",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3.jpg?raw=true",
+        "priority": "1"
+      },
+      {
+        "term": "投機実行",
+        "description": "パイプラインの性能を向上させるための技法の一つで、分岐条件の結果が決定する前に、分岐先を予測して命令を実行する",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E6%8A%95%E6%A9%9F%E5%AE%9F%E8%A1%8C.jpg?raw=true",
+        "priority": "1"
+      },
+      {
+        "term": "ウェアレベリング (Wear Leveling) ",
+        "description": "ウェアレベリング (Wear Leveling) は、電子記憶媒体において、全体的にどのブロックも均等に使うように物理的な書込み位置を制御することです。フラッシュメモリのように書換え可能回数に制限がある記憶媒体では、同じブロックへの書込みと消去が集中するとそのブロックが先に不良となってしまいます。記憶媒体の寿命を延ばすために、このような制御が行われています。",
+        "image": "-",
+        "priority": "3"
+      }
+    ]
+  },
+  {
+    "title": "システム構成",
+    "terms": [
+      {
+        "term": "スケールアウト",
+        "description": "システムを構成するサーバの台数を増やす",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%A2%E3%82%A6%E3%83%88.jpg?raw=true",
+        "priority": "1"
+      },
+      {
+        "term": "スケールアップ",
+        "description": "サーバ自身の性能をより高いものに交換する",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97.jpg?raw=true",
+        "priority": "1"
+      },
+      {
+        "term": "スケールイン",
+        "description": "システムを構成するサーバの台数を減らす。その他",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%A4%E3%83%B3.jpg?raw=true",
+        "priority": "1"
+      }
+    ]
+  },
+  {
     "title": "データベース",
     "terms": [
+      {
+        "term": "ストアドプロシージャ",
+        "description": "",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E3%82%B9%E3%83%88%E3%82%A2%E3%83%89%E3%83%97%E3%83%AD%E3%82%B7%E3%83%BC%E3%82%B8%E3%83%A3.jpg?raw=true",
+        "priority": "1"
+      },
       {
         "term": "正規化",
         "description": "データベース設計において、冗長性を減らし、データの一貫性を保つためにテーブルを分割するプロセス。第一正規形 (1NF)、第二正規形 (2NF)、第三正規形 (3NF) などの段階があります。",
@@ -91,6 +154,69 @@
         "description": "大規模なテーブルをより小さなパーティションに分割することで、データベースの管理やクエリ性能を向上させる手法。",
         "image": "-",
         "priority": "3"
+      }
+    ]
+  },
+  {
+    "title": "メモリ",
+    "terms": [
+      {
+        "term": "ライトスルー方式",
+        "description": "キャッシュメモリ書き込み時に、主記憶にも書き込む",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E3%83%A9%E3%82%A4%E3%83%88%E3%82%B9%E3%83%AB%E3%83%BC%E6%96%B9%E5%BC%8F.jpg?raw=true",
+        "priority": "1"
+      },
+      {
+        "term": "ライトバック方式",
+        "description": "普段はキャッシュメモリだけ。追い出されるときに主記憶装置に書く。",
+        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E3%83%A9%E3%82%A4%E3%83%88%E3%83%90%E3%83%83%E3%82%AF%E6%96%B9%E5%BC%8F.jpg?raw=true",
+        "priority": "1"
+      }
+    ]
+  },
+  {
+    "title": "セキュリティー",
+    "terms": [
+      {
+        "term": "デジタルフォレンジックス",
+        "description": "インシデント発生時に、電磁的記録を確実かつ正確に保持して、立証に役立てる",
+        "image": "-",
+        "priority": "1"
+      }
+    ]
+  },
+  {
+    "title": "故障対策",
+    "terms": [
+      {
+        "term": "フォールトトレラント",
+        "description": "壊れても大丈夫なように対策をはかる考え方",
+        "image": "-",
+        "priority": "1"
+      },
+      {
+        "term": "フェールセーフ",
+        "description": "故障の場合は安全性を最優先する。石油ストーブ",
+        "image": "-",
+        "priority": "1"
+      },
+      {
+        "term": "フェールソフト",
+        "description": "故障の場合は継続性が最優先。飛行機のエンジン",
+        "image": "-",
+        "priority": "1"
+      },
+      {
+        "term": "フェールプルーフ",
+        "description": "意図しない使い方をしても故障しないようにする。洗濯機。",
+        "image": "-",
+        "priority": "1"
+      },
+      {
+        "term": "フォールトトレラントアボイダンス",
+        "description": "故障そもそもの発生を防ごう",
+        "image": "-",
+        "priority": "1"
       }
     ]
   },
@@ -1135,40 +1261,6 @@
       {
         "term": "99999999",
         "description": "-",
-        "image": "-",
-        "priority": "3"
-      }
-    ]
-  },
-  {
-    "title": "応用数学",
-    "terms": [
-      {
-        "term": "主成分分析",
-        "description": "主成分分析とは、多くの変数を持つデータを集約して主成分を作成する統計的分析手法です。",
-        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90.jpg?raw=true",
-        "priority": "3"
-      }
-    ]
-  },
-  {
-    "title": "コンピュータ構成要素",
-    "terms": [
-      {
-        "term": "パイプライン処理",
-        "description": "複数の命令を並行して実行",
-        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3.jpg?raw=true",
-        "priority": "3"
-      },
-      {
-        "term": "投機実行",
-        "description": "パイプラインの性能を向上させるための技法の一つで、分岐条件の結果が決定する前に、分岐先を予測して命令を実行する",
-        "image": "https://github.com/egoforest-web/ap_image/blob/main/docs/figure/%E6%8A%95%E6%A9%9F%E5%AE%9F%E8%A1%8C.jpg?raw=true",
-        "priority": "3"
-      },
-      {
-        "term": "ウェアレベリング (Wear Leveling) ",
-        "description": "ウェアレベリング (Wear Leveling) は、電子記憶媒体において、全体的にどのブロックも均等に使うように物理的な書込み位置を制御することです。フラッシュメモリのように書換え可能回数に制限がある記憶媒体では、同じブロックへの書込みと消去が集中するとそのブロックが先に不良となってしまいます。記憶媒体の寿命を延ばすために、このような制御が行われています。",
         "image": "-",
         "priority": "3"
       }
